@@ -12,3 +12,14 @@ body,html{
     width: 50%;
     height: 10vh;
 }
+#sign {
+    margin-left: 400px;
+    background-color: rgba(0, 0, 0, 0.514);
+    width: 50%;
+    height: 20vh;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
