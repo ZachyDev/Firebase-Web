@@ -29,12 +29,14 @@ const addUser = () => {
 // fetch data from firestore
 
 const getData = (docId) => {
+    let dataDiv = document.getElementById('data');
+    let users = [];
     db.collection('users').get()
         .then(snapShot => {
             snapShot.forEach(doc => {
-                console.log(doc.data());
-                docId = doc.id;
-                console.log(docId)
+                users = doc.data();
+                // update the DOM
+                dataDiv.innerHTML = users;  
             });
         })
         .catch(err => {
